@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import { useState, useRef, useEffect } from "react";
-
 
 export default function TerminalSection() {
     const [input, setInput] = useState("");
@@ -40,27 +39,58 @@ export default function TerminalSection() {
                 setHistory([]);
                 return null;
             }
+        },
+        ask: {
+            description: "Ask a question and get an answer from Google Gemini API",
+            action: async (question) => {
+                if (!question) {
+                    return "Please provide a question. Usage: ask <your question>";
+                }
+
+                try {
+                    const response = await fetch("https://api.google.com/gemini/v1/ask", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_GEMINI_API_KEY}` // Use env variable
+                        },
+                        body: JSON.stringify({ query: question })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch the answer. Please try again.");
+                    }
+
+                    const data = await response.json();
+                    return data.answer || "No answer found.";
+                } catch (error) {
+                    return `Error: ${error.message}`;
+                }
+            }
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!input.trim()) return;
 
-        const userInput = input.trim().toLowerCase();
-        setHistory(prev => [...prev, { text: `$ ${input}`, type: "input" }]);
+        const userInput = input.trim();
+        const [command, ...args] = userInput.split(" ");
+        const argument = args.join(" ");
+
+        setHistory(prev => [...prev, { text: `$ ${userInput}`, type: "input" }]);
         setInput("");
 
         // Process command
-        if (commands[userInput]) {
-            const result = commands[userInput].action();
+        if (commands[command]) {
+            const result = await commands[command].action(argument);
             if (result !== null) {
                 setHistory(prev => [...prev, { text: result, type: "output" }]);
             }
         } else {
             setHistory(prev => [...prev, {
-                text: `Command not found: ${userInput}. Type 'help' to see available commands.`,
+                text: `Command not found: ${command}. Type 'help' to see available commands.`,
                 type: "error"
             }]);
         }
