@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "title": "Introduction to Control Plane",
+      "link": "https://cp-handbook.netlify.app/introduction",
+      "description": "An overview of control plane concepts and their importance."
+    },
+    {
+      "title": "Control Plane Architecture",
+      "link": "https://cp-handbook.netlify.app/architecture",
+      "description": "Detailed explanation of the architecture of control planes."
+    },
+    {
+      "title": "API Management",
+      "link": "https://cp-handbook.netlify.app/api-management",
+      "description": "Understanding API management in control planes."
+    },
+    {
+      "title": "Security in Control Planes",
+      "link": "https://cp-handbook.netlify.app/security",
+      "description": "Best practices for securing control planes."
+    },
+    {
+      "title": "Monitoring and Logging",
+      "link": "https://cp-handbook.netlify.app/monitoring",
+      "description": "Techniques for monitoring and logging in control planes."
+    },
+    {
+      "title": "Deployment Strategies",
+      "link": "https://cp-handbook.netlify.app/deployment",
+      "description": "Various strategies for deploying control planes."
+    },
+    {
+      "title": "Troubleshooting",
+      "link": "https://cp-handbook.netlify.app/troubleshooting",
+      "description": "Common issues and troubleshooting tips for control planes."
+    },
+    {
+      "title": "Case Studies",
+      "link": "https://cp-handbook.netlify.app/case-studies",
+      "description": "Real-world examples of control plane implementations."
+    }
+  ]
+}
