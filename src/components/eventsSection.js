@@ -13,7 +13,7 @@ const EventsSection = () => {
             location: "San Francisco, CA",
             description:
                 "Join industry leaders for the latest in artificial intelligence innovations and networking opportunities.",
-            imageUrl: "/images/ai-conference.jpg",
+            imageUrl: "/images/logo.jpg",
         },
         {
             id: 2,
