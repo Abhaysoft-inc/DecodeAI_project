@@ -107,6 +107,7 @@ export default function Home() {
       <TerminalSection />
       <EventsSection />
       <ContactSection />
+
       <Footer />
 
 
