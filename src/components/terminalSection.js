@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 export default function TerminalSection() {
     const [input, setInput] = useState("");
     const [history, setHistory] = useState([
-        { text: "Welcome to DecodeAI Terminal. Type 'help' to see available commands.", type: "system" }
+        { text: "Welcome to PTSC Terminal. Type 'help' to see available commands.", type: "system" }
     ]);
     const inputRef = useRef(null);
     const terminalRef = useRef(null);
@@ -82,7 +82,7 @@ export default function TerminalSection() {
 
     return (
         <div className="min-h-screen bg-gray-900 text-white p-4 flex flex-col items-center">
-            <h1 className="text-3xl font-bold mb-8">DecodeAI Terminal</h1>
+            <h1 className="text-3xl font-bold mb-8">PTSC Terminal</h1>
 
             <div
                 className="w-full max-w-3xl bg-black rounded-lg shadow-2xl overflow-hidden"
