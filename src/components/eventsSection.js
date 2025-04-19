@@ -13,7 +13,7 @@ const EventsSection = () => {
             location: "San Francisco, CA",
             description:
                 "Join industry leaders for the latest in artificial intelligence innovations and networking opportunities.",
-            imageUrl: "/images/ai-conference.jpg",
+            imageUrl: "/img/gdg.jpg",
         },
         {
             id: 2,
@@ -22,16 +22,16 @@ const EventsSection = () => {
             location: "Virtual Event",
             description:
                 "Hands-on workshop covering advanced ML techniques and practical applications.",
-            imageUrl: "/images/ml-workshop.jpg",
+            imageUrl: "/img/img2.jpg",
         },
         {
             id: 3,
             title: "DecodeAI Hackathon",
             date: "2025-07-10T08:00:00",
-            location: "New York, NY",
+            location: "IISF hall KNIT Sultanpur",
             description:
-                "48-hour coding challenge with prizes for the most innovative AI solutions.",
-            imageUrl: "/images/hackathon.jpg",
+                "4-hour coding challenge with prizes for the most innovative AI solutions.",
+            imageUrl: "img/img3.jpg",
         },
     ]);
 
