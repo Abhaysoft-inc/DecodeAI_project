@@ -28,7 +28,10 @@ export default function TerminalSection() {
         about: {
             description: "Show information about DecodeAI",
             action: () => {
-                return "DecodeAI is a cutting-edge platform for AI experimentation and learning.";
+                                    return `  
+                    The Programming and Tech Skill Club at KNIT Sultanpur is a vibrant
+                    community of students who share a common love for programming.   
+                    Our club brings together individuals across all skill levels—whether you're a beginner or a seasoned coder—to explore the world of competitive programming, web development, machine learning, app development and beyond. Through regular coding contests, hackathons, workshops, and peer-to-peer learning, we aim to cultivate problem-solving skills that are essential for success in the tech world.`;
             }
         },
         clear: {
